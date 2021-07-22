@@ -7,7 +7,6 @@ const removeHyphens = (obj) => {
     const recurse = (obj) => {
         for (const key in obj) {
             let value = obj[key];
-            if(value != undefined) {
                 if (value && typeof value === 'object') {
                     recurse(value, key);
                 } else {
@@ -16,7 +15,6 @@ const removeHyphens = (obj) => {
                 }
             }
         }
-    }
     recurse(obj);
     return newObj;
 }
